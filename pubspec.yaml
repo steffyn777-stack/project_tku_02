@@ -1,0 +1,64 @@
+name: flutter_body
+description: RehabAssist - AI 復健訓練助理
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  shared_preferences: ^2.2.2
+  camera: ^0.11.2+1
+  web_socket_channel: ^2.4.0
+  onnxruntime_v2: ^1.23.2
+  flutter_tts: ^4.2.5
+  model_viewer_plus: ^1.10.0
+  flutter_inappwebview: ^6.1.5
+  audioplayers: ^6.0.0
+  video_player: ^2.9.2
+  file_picker: ^8.0.0
+  video_thumbnail: ^0.5.3
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.4
+  http: ^1.6.0
+  provider: ^6.1.2
+  flutter_webrtc: ^1.5.2
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/rtmdet.onnx
+    - assets/rtmpose_wholebody.onnx
+    - assets/models/
+    - assets/viewer/
+    - assets/icon/
+    - assets/audio/
+    - assets/splash/
+    - assets/preset_videos/
+
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#4A65FF"
+  adaptive_icon_foreground: "assets/icon/icon.png"
+
+flutter_native_splash:
+  color: "#F5F7FA"
+  android: true
+  ios: false
